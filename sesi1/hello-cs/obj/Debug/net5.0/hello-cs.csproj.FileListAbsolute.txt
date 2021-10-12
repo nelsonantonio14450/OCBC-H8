@@ -1,0 +1,16 @@
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\bin\Debug\net5.0\hello-cs.exe
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\bin\Debug\net5.0\hello-cs.deps.json
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\bin\Debug\net5.0\hello-cs.runtimeconfig.json
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\bin\Debug\net5.0\hello-cs.runtimeconfig.dev.json
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\bin\Debug\net5.0\hello-cs.dll
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\bin\Debug\net5.0\ref\hello-cs.dll
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\bin\Debug\net5.0\hello-cs.pdb
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\obj\Debug\net5.0\hello-cs.csproj.AssemblyReference.cache
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\obj\Debug\net5.0\hello-cs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\obj\Debug\net5.0\hello-cs.AssemblyInfoInputs.cache
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\obj\Debug\net5.0\hello-cs.AssemblyInfo.cs
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\obj\Debug\net5.0\hello-cs.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\obj\Debug\net5.0\hello-cs.dll
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\obj\Debug\net5.0\ref\hello-cs.dll
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\obj\Debug\net5.0\hello-cs.pdb
+C:\Users\ASUS\Downloads\belajar c#\sesi1\hello-cs\obj\Debug\net5.0\hello-cs.genruntimeconfig.cache
