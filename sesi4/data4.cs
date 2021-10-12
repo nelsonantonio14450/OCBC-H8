@@ -17,6 +17,8 @@ class data4
             {10,100}
         };
 
-        int i, j
+        int i, j;
+
+
     }
 }

@@ -6,7 +6,8 @@ class Soal5
     public static void Main()
     {
         string a;
-        a = "1234";
+        Console.WriteLine("ketik angka : ");
+        a = Console.ReadLine();
         char[] ch = new char[a.Length];
 
         for (int i = 0; i < a.Length; i++)
