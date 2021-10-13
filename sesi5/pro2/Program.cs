@@ -16,7 +16,7 @@ namespace pro2
 
             while (re == false)
             {
-                Console.WriteLine("1. Pesawat \n 2. datanew \n 3. bilangan \n 4. About me \n 5. Exit : ");
+                Console.WriteLine("1. Pesawat \n2. datanew \n3. bilangan \n4. About me \n5. Exit : ");
                 pil = int.Parse(Console.ReadLine());
                 if (pil == 1)
                 {
