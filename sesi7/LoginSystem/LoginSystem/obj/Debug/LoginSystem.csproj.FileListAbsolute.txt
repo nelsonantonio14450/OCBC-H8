@@ -35,3 +35,4 @@ C:\Users\ASUS\Downloads\belajar c#\sesi7\LoginSystem\LoginSystem\obj\Debug\Login
 C:\Users\ASUS\Downloads\belajar c#\sesi7\LoginSystem\LoginSystem\obj\Debug\LoginSystem.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Downloads\belajar c#\sesi7\LoginSystem\LoginSystem\obj\Debug\LoginSystem.exe
 C:\Users\ASUS\Downloads\belajar c#\sesi7\LoginSystem\LoginSystem\obj\Debug\LoginSystem.pdb
+C:\Users\ASUS\Downloads\belajar c#\sesi7\LoginSystem\LoginSystem\obj\Debug\LoginSystem.FormData.resources

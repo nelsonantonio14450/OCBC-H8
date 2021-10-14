@@ -36,9 +36,13 @@ namespace LoginSystem
         {
             db.ExecuteSelect("SELECT * FROM user_info where username='" + textBox1.Text + "' and password ='" + textBox2.Text + "'");
 
-            if (db.Count() >= 1)
+            if (db.Count() == 1)
             {
                 MessageBox.Show("Success You Will Login as " + db.Results(0, "names"));
+                FormData frm = new FormData();
+                frm.Show();
+                this.Hide();
+
             } else
             {
                 MessageBox.Show("Wrong username and password combination");

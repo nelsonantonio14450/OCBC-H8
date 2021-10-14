@@ -12,9 +12,19 @@ namespace LoginSystem
 {
     public partial class FormData : Form
     {
+        Config db = new Config();
         public FormData()
         {
             InitializeComponent();
+            db.connect("userdata");
+        }
+
+        private void FormData_Load(object sender, EventArgs e)
+        {
+            db.ExecuteSelect("SELECT * FROM data_staff");
+            
+           
+
         }
     }
 }
