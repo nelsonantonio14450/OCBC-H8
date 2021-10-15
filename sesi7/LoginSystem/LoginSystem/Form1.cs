@@ -10,8 +10,12 @@ using System.Windows.Forms;
 
 namespace LoginSystem
 {
+    
     public partial class Form1 : Form
     {
+        public static string nama = "";
+        public static string username = "";
+
         Config db = new Config();
 
         public Form1()
@@ -30,6 +34,7 @@ namespace LoginSystem
         {
             register register = new register();
             register.Show();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,6 +43,8 @@ namespace LoginSystem
 
             if (db.Count() == 1)
             {
+                nama = textBox1.Text;
+                username = textBox2.Text;
                 MessageBox.Show("Success You Will Login as " + db.Results(0, "names"));
                 FormData frm = new FormData();
                 frm.Show();
