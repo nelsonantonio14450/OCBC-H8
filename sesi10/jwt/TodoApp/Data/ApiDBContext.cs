@@ -1,5 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using TodoApp.Models;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using TodoAppWithJWT.Configuration;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace TodoApp.Data
 {
