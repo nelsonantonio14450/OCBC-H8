@@ -43,7 +43,7 @@ namespace TodoApp
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TodoApp", Version = "v1" });
             });
 
-            services.AddAuthentication(Options =>
+            services.AddAuthentication(Options => //jwt dari sini
             {
                 Options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 Options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -63,7 +63,7 @@ namespace TodoApp
                     ValidateLifetime = true,
                     RequireExpirationTime = false
                 };
-            });
+            }); //sampe sini jwt
 
             services.AddDefaultIdentity<IdentityUser>(Options => Options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApiDBContext>();
         }
@@ -81,7 +81,8 @@ namespace TodoApp
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseAuthentication();
+
+            app.UseAuthentication(); //add ini jwt
 
             app.UseAuthorization();
 
