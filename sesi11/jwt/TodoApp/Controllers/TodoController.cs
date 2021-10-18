@@ -3,9 +3,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TodoApp.Data;
 using TodoApp.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+
+
 
 namespace TodoApp.Controllers
 {
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] //ini buat authorize
     [Route("api/[controller]")]//api/todo/testrun
     [ApiController]
     public class TodoController : ControllerBase

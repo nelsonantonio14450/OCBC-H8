@@ -38,10 +38,46 @@ namespace TodoApp
             services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
             services.AddControllers();
             services.AddDbContext<ApiDBContext>(options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TodoApp", Version = "v1" });
-            });
+            services
+                .AddSwaggerGen(swagger =>
+                {
+                    swagger
+                        .SwaggerDoc("v1",
+                        new OpenApiInfo
+                        {
+                            Title = "TodoApp",
+                            Version = "v1",
+                            Description =
+                                "Authentication and Authorization in ASP.NET 5 with JWT and Swagger"
+                        });
+
+                    // To Enable authorization using Swagger (JWT)
+                    swagger
+                        .AddSecurityDefinition("Bearer",
+                        new OpenApiSecurityScheme()
+                        {
+                            Name = "Authorization",
+                            Type = SecuritySchemeType.ApiKey,
+                            Scheme = "Bearer",
+                            BearerFormat = "JWT",
+                            In = ParameterLocation.Header,
+                            Description =
+                                "Enter 'Bearer' [space] and then your valid token in the text input below.\r\n\r\nExample: \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\""
+                        });
+                    swagger
+                        .AddSecurityRequirement(new OpenApiSecurityRequirement {
+                            {
+                                new OpenApiSecurityScheme {
+                                    Reference =
+                                        new OpenApiReference {
+                                            Type = ReferenceType.SecurityScheme,
+                                            Id = "Bearer"
+                                        }
+                                },
+                                new string[] { }
+                            }
+                        });
+                });
 
             var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:Secret"]);
 
