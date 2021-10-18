@@ -12,11 +12,16 @@ using Microsoft.IdentityModel.Tokens;
 using TodoAppWithJWT.Configuration;
 using TodoAppWithJWT.Models.DTO.Request;
 using TodoAppWithJWT.Models.DTO.Responses;
+using TodoApp.Data;
+using TodoApp.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace TodoAppWithJWT.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class AuthManagementController : ControllerBase
     {
         private readonly UserManager<IdentityUser> _userManager;
