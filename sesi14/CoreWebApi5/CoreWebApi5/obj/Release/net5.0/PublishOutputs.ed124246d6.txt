@@ -1,0 +1,11 @@
+C:\Users\ASUS\source\repos\CoreWebApi5\CoreWebApi5\bin\Release\net5.0\publish\CoreWebApi5.exe
+C:\Users\ASUS\source\repos\CoreWebApi5\CoreWebApi5\bin\Release\net5.0\publish\appsettings.Development.json
+C:\Users\ASUS\source\repos\CoreWebApi5\CoreWebApi5\bin\Release\net5.0\publish\appsettings.json
+C:\Users\ASUS\source\repos\CoreWebApi5\CoreWebApi5\bin\Release\net5.0\publish\CoreWebApi5.dll
+C:\Users\ASUS\source\repos\CoreWebApi5\CoreWebApi5\bin\Release\net5.0\publish\CoreWebApi5.deps.json
+C:\Users\ASUS\source\repos\CoreWebApi5\CoreWebApi5\bin\Release\net5.0\publish\CoreWebApi5.runtimeconfig.json
+C:\Users\ASUS\source\repos\CoreWebApi5\CoreWebApi5\bin\Release\net5.0\publish\CoreWebApi5.pdb
+C:\Users\ASUS\source\repos\CoreWebApi5\CoreWebApi5\bin\Release\net5.0\publish\Microsoft.OpenApi.dll
+C:\Users\ASUS\source\repos\CoreWebApi5\CoreWebApi5\bin\Release\net5.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ASUS\source\repos\CoreWebApi5\CoreWebApi5\bin\Release\net5.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ASUS\source\repos\CoreWebApi5\CoreWebApi5\bin\Release\net5.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll

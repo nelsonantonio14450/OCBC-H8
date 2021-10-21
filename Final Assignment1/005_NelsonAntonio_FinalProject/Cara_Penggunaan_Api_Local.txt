@@ -1,3 +1,4 @@
+- pastikan mysql pada xampp sudah menyala
 - buka direktori dari program
 - klik kanan lalu gitbash dan ketikan dotnet run
 - Buka localhost:5001/swagger/index.html
