@@ -1,0 +1,23 @@
+//langkah penggunaan heroku tanpa Docker dengan menggunakan integrasi github
+- login pada heroku
+
+- Create New App
+
+- pilih deployment by github
+
+sebelum proses deployment ke menu settings > buildpack > add buildpack lalu add 
+"jincod/dotnetcore"
+
+step 1. Github
+- buat repo baru
+- push file project ke github
+
+step 2. heroku
+- ke menu deploy, pilih github
+- connect ke github dengan login dari menu di heroku
+- search repo project tadi dari github
+- tekan connect
+- project sudah tersambung
+- tekan enable auto deploy
+- untuk deployment pertama harus ke menu auto deploy (paling bawah) kemudian tekan deploy
+- project sudah terdeploy

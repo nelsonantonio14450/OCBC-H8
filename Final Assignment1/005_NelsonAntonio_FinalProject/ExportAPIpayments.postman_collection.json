@@ -1,0 +1,637 @@
+{
+	"info": {
+		"_postman_id": "daf6b20a-a28e-4991-a97c-99925a752baa",
+		"name": "payments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crud",
+			"item": [
+				{
+					"name": "GetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVjNzZmZTNjLWI0ZjEtNDBkYy05NmY4LTllZmViZmY4MWUwYSIsImVtYWlsIjoiYWFhQGV4YW1wbGUuY29tIiwic3ViIjoiYWFhQGV4YW1wbGUuY29tIiwianRpIjoiODk1MjFkNzUtYzc3Mi00YWFlLWEzMjQtODE3OWMzNzk0NWJkIiwibmJmIjoxNjM0ODA4Mjg4LCJleHAiOjE2MzQ4MTAwODgsImlhdCI6MTYzNDgwODI4OH0.MoxEtImmOFdVD2Le2MZafsXvpYuHOSWk0fbu8_kufdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nelsonfinalassignment1.herokuapp.com/api/payment",
+							"protocol": "https",
+							"host": [
+								"nelsonfinalassignment1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVjNzZmZTNjLWI0ZjEtNDBkYy05NmY4LTllZmViZmY4MWUwYSIsImVtYWlsIjoiYWFhQGV4YW1wbGUuY29tIiwic3ViIjoiYWFhQGV4YW1wbGUuY29tIiwianRpIjoiODk1MjFkNzUtYzc3Mi00YWFlLWEzMjQtODE3OWMzNzk0NWJkIiwibmJmIjoxNjM0ODA4Mjg4LCJleHAiOjE2MzQ4MTAwODgsImlhdCI6MTYzNDgwODI4OH0.MoxEtImmOFdVD2Le2MZafsXvpYuHOSWk0fbu8_kufdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cardOwnerName\": \"nemuri\",\r\n  \"cardNumber\": \"asdasdasd\",\r\n  \"expirationDate\": \"2021-10-21T09:27:34.562Z\",\r\n  \"paidAt\": \"2021-10-21T09:27:34.562Z\",\r\n  \"securityCode\": \"aaaaa\",\r\n  \"amount\": 30000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nelsonfinalassignment1.herokuapp.com/api/payment",
+							"protocol": "https",
+							"host": [
+								"nelsonfinalassignment1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVjNzZmZTNjLWI0ZjEtNDBkYy05NmY4LTllZmViZmY4MWUwYSIsImVtYWlsIjoiYWFhQGV4YW1wbGUuY29tIiwic3ViIjoiYWFhQGV4YW1wbGUuY29tIiwianRpIjoiODk1MjFkNzUtYzc3Mi00YWFlLWEzMjQtODE3OWMzNzk0NWJkIiwibmJmIjoxNjM0ODA4Mjg4LCJleHAiOjE2MzQ4MTAwODgsImlhdCI6MTYzNDgwODI4OH0.MoxEtImmOFdVD2Le2MZafsXvpYuHOSWk0fbu8_kufdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paymentDetailId\": 2,\r\n  \"cardOwnerName\": \"111111\",\r\n  \"cardNumber\": \"11111\",\r\n  \"expirationDate\": \"2021-10-21T09:27:34.562Z\",\r\n  \"paidAt\": \"2021-10-21T09:27:34.562Z\",\r\n  \"securityCode\": \"2222\",\r\n  \"amount\": 3002200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nelsonfinalassignment1.herokuapp.com/api/payment/2",
+							"protocol": "https",
+							"host": [
+								"nelsonfinalassignment1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"payment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVjNzZmZTNjLWI0ZjEtNDBkYy05NmY4LTllZmViZmY4MWUwYSIsImVtYWlsIjoiYWFhQGV4YW1wbGUuY29tIiwic3ViIjoiYWFhQGV4YW1wbGUuY29tIiwianRpIjoiODk1MjFkNzUtYzc3Mi00YWFlLWEzMjQtODE3OWMzNzk0NWJkIiwibmJmIjoxNjM0ODA4Mjg4LCJleHAiOjE2MzQ4MTAwODgsImlhdCI6MTYzNDgwODI4OH0.MoxEtImmOFdVD2Le2MZafsXvpYuHOSWk0fbu8_kufdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nelsonfinalassignment1.herokuapp.com/api/payment/3",
+							"protocol": "https",
+							"host": [
+								"nelsonfinalassignment1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"payment",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVjNzZmZTNjLWI0ZjEtNDBkYy05NmY4LTllZmViZmY4MWUwYSIsImVtYWlsIjoiYWFhQGV4YW1wbGUuY29tIiwic3ViIjoiYWFhQGV4YW1wbGUuY29tIiwianRpIjoiODk1MjFkNzUtYzc3Mi00YWFlLWEzMjQtODE3OWMzNzk0NWJkIiwibmJmIjoxNjM0ODA4Mjg4LCJleHAiOjE2MzQ4MTAwODgsImlhdCI6MTYzNDgwODI4OH0.MoxEtImmOFdVD2Le2MZafsXvpYuHOSWk0fbu8_kufdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nelsonfinalassignment1.herokuapp.com/api/payment/1",
+							"protocol": "https",
+							"host": [
+								"nelsonfinalassignment1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"payment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByBetweenPaidDate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVjNzZmZTNjLWI0ZjEtNDBkYy05NmY4LTllZmViZmY4MWUwYSIsImVtYWlsIjoiYWFhQGV4YW1wbGUuY29tIiwic3ViIjoiYWFhQGV4YW1wbGUuY29tIiwianRpIjoiODk1MjFkNzUtYzc3Mi00YWFlLWEzMjQtODE3OWMzNzk0NWJkIiwibmJmIjoxNjM0ODA4Mjg4LCJleHAiOjE2MzQ4MTAwODgsImlhdCI6MTYzNDgwODI4OH0.MoxEtImmOFdVD2Le2MZafsXvpYuHOSWk0fbu8_kufdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nelsonfinalassignment1.herokuapp.com/api/payment/GetDate/2021-10-20T09:27:34.562Z, 2021-10-22T09:27:34.562Z",
+							"protocol": "https",
+							"host": [
+								"nelsonfinalassignment1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"payment",
+								"GetDate",
+								"2021-10-20T09:27:34.562Z, 2021-10-22T09:27:34.562Z"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByMoreThanPaidDate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVjNzZmZTNjLWI0ZjEtNDBkYy05NmY4LTllZmViZmY4MWUwYSIsImVtYWlsIjoiYWFhQGV4YW1wbGUuY29tIiwic3ViIjoiYWFhQGV4YW1wbGUuY29tIiwianRpIjoiODk1MjFkNzUtYzc3Mi00YWFlLWEzMjQtODE3OWMzNzk0NWJkIiwibmJmIjoxNjM0ODA4Mjg4LCJleHAiOjE2MzQ4MTAwODgsImlhdCI6MTYzNDgwODI4OH0.MoxEtImmOFdVD2Le2MZafsXvpYuHOSWk0fbu8_kufdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nelsonfinalassignment1.herokuapp.com/api/payment/MoreDate/2021-10-20T09:27:34.562Z",
+							"protocol": "https",
+							"host": [
+								"nelsonfinalassignment1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"payment",
+								"MoreDate",
+								"2021-10-20T09:27:34.562Z"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByLessThanPaidDate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVjNzZmZTNjLWI0ZjEtNDBkYy05NmY4LTllZmViZmY4MWUwYSIsImVtYWlsIjoiYWFhQGV4YW1wbGUuY29tIiwic3ViIjoiYWFhQGV4YW1wbGUuY29tIiwianRpIjoiODk1MjFkNzUtYzc3Mi00YWFlLWEzMjQtODE3OWMzNzk0NWJkIiwibmJmIjoxNjM0ODA4Mjg4LCJleHAiOjE2MzQ4MTAwODgsImlhdCI6MTYzNDgwODI4OH0.MoxEtImmOFdVD2Le2MZafsXvpYuHOSWk0fbu8_kufdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nelsonfinalassignment1.herokuapp.com/api/payment/LessDate/2021-10-22T09:27:34.562Z",
+							"protocol": "https",
+							"host": [
+								"nelsonfinalassignment1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"payment",
+								"LessDate",
+								"2021-10-22T09:27:34.562Z"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByAmount",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVjNzZmZTNjLWI0ZjEtNDBkYy05NmY4LTllZmViZmY4MWUwYSIsImVtYWlsIjoiYWFhQGV4YW1wbGUuY29tIiwic3ViIjoiYWFhQGV4YW1wbGUuY29tIiwianRpIjoiODk1MjFkNzUtYzc3Mi00YWFlLWEzMjQtODE3OWMzNzk0NWJkIiwibmJmIjoxNjM0ODA4Mjg4LCJleHAiOjE2MzQ4MTAwODgsImlhdCI6MTYzNDgwODI4OH0.MoxEtImmOFdVD2Le2MZafsXvpYuHOSWk0fbu8_kufdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nelsonfinalassignment1.herokuapp.com/api/payment/GetByAmount/1000, 10000",
+							"protocol": "https",
+							"host": [
+								"nelsonfinalassignment1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"payment",
+								"GetByAmount",
+								"1000, 10000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByMoreThanExpDate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVjNzZmZTNjLWI0ZjEtNDBkYy05NmY4LTllZmViZmY4MWUwYSIsImVtYWlsIjoiYWFhQGV4YW1wbGUuY29tIiwic3ViIjoiYWFhQGV4YW1wbGUuY29tIiwianRpIjoiODk1MjFkNzUtYzc3Mi00YWFlLWEzMjQtODE3OWMzNzk0NWJkIiwibmJmIjoxNjM0ODA4Mjg4LCJleHAiOjE2MzQ4MTAwODgsImlhdCI6MTYzNDgwODI4OH0.MoxEtImmOFdVD2Le2MZafsXvpYuHOSWk0fbu8_kufdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nelsonfinalassignment1.herokuapp.com/api/payment/MoreExpDate/2021-10-20T09:27:34.562Z",
+							"protocol": "https",
+							"host": [
+								"nelsonfinalassignment1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"payment",
+								"MoreExpDate",
+								"2021-10-20T09:27:34.562Z"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByLessThanExpDate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVjNzZmZTNjLWI0ZjEtNDBkYy05NmY4LTllZmViZmY4MWUwYSIsImVtYWlsIjoiYWFhQGV4YW1wbGUuY29tIiwic3ViIjoiYWFhQGV4YW1wbGUuY29tIiwianRpIjoiODk1MjFkNzUtYzc3Mi00YWFlLWEzMjQtODE3OWMzNzk0NWJkIiwibmJmIjoxNjM0ODA4Mjg4LCJleHAiOjE2MzQ4MTAwODgsImlhdCI6MTYzNDgwODI4OH0.MoxEtImmOFdVD2Le2MZafsXvpYuHOSWk0fbu8_kufdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nelsonfinalassignment1.herokuapp.com/api/payment/LessExpDate/2021-10-21T09:27:34.562Z",
+							"protocol": "https",
+							"host": [
+								"nelsonfinalassignment1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"payment",
+								"LessExpDate",
+								"2021-10-21T09:27:34.562Z"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBetweenExpDate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjVjNzZmZTNjLWI0ZjEtNDBkYy05NmY4LTllZmViZmY4MWUwYSIsImVtYWlsIjoiYWFhQGV4YW1wbGUuY29tIiwic3ViIjoiYWFhQGV4YW1wbGUuY29tIiwianRpIjoiODk1MjFkNzUtYzc3Mi00YWFlLWEzMjQtODE3OWMzNzk0NWJkIiwibmJmIjoxNjM0ODA4Mjg4LCJleHAiOjE2MzQ4MTAwODgsImlhdCI6MTYzNDgwODI4OH0.MoxEtImmOFdVD2Le2MZafsXvpYuHOSWk0fbu8_kufdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nelsonfinalassignment1.herokuapp.com/api/payment/GetExpDate/2021-10-20T09:27:34.562Z, 2021-10-22T09:27:34.562Z",
+							"protocol": "https",
+							"host": [
+								"nelsonfinalassignment1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"payment",
+								"GetExpDate",
+								"2021-10-20T09:27:34.562Z, 2021-10-22T09:27:34.562Z"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"aaa@example.com\",\r\n  \"password\": \"Admin_12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nelsonfinalassignment1.herokuapp.com/api/AuthManagement/Login",
+							"protocol": "https",
+							"host": [
+								"nelsonfinalassignment1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"AuthManagement",
+								"Login"
+							]
+						},
+						"description": "login"
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"aaa\",\r\n  \"email\": \"aaa@example.com\",\r\n  \"password\": \"Admin_12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nelsonfinalassignment1.herokuapp.com/api/AuthManagement/Register",
+							"protocol": "https",
+							"host": [
+								"nelsonfinalassignment1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"AuthManagement",
+								"Register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RefreshToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"token\": \"string\",\r\n  \"refreshToken\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nelsonfinalassignment1.herokuapp.com/api/AuthManagement/RefreshToken",
+							"protocol": "https",
+							"host": [
+								"nelsonfinalassignment1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"AuthManagement",
+								"RefreshToken"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

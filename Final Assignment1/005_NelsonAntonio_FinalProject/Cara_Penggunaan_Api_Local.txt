@@ -1,0 +1,63 @@
+- buka direktori dari program
+- klik kanan lalu gitbash dan ketikan dotnet run
+- Buka localhost:5001/swagger/index.html
+- Pilih Register dan registrasi akun pada /api/AuthManagement/Register
+	masukan username, email, passowrd
+- pilih login dan login dengan akun yang ada pada /api/AuthManagement/Login
+	 masukan email dan password, didapatkan token bearer
+- tekan tombol authorize dan masukan bearer [token]
+
+- check masing-masing end point yang ada
+
+1. /api/payment [Get]
+	execute dan didapatkan lah hasilnya
+
+2. /api/payment [Post]
+	masukan data yang sesuai lalu execute untuk insert
+
+3. /api/payment/getdate/{date1}, {date2} [Get] 
+	//get data yang between inputan tanggal pembayaran
+	masukan tanggal yang sesuai seperti berikut 2021-10-20T09:27:34.562Z
+	tekan execute dan dapat hasilnya
+
+4. /api/payment/moredate/{date1} [Get] 
+	//get data yang tanggal pembayaran yang lebih dari input
+	masukan tanggal yang sesuai seperti berikut 2021-10-20T09:27:34.562Z
+	tekan execute dan dapat hasilnya
+
+5. /api/payment/lessdate/{date1} [Get] 
+	//get data yang tanggal pembayaran yang kurang dari input
+	masukan tanggal yang sesuai seperti berikut 2021-10-20T09:27:34.562Z
+	tekan execute dan dapat hasilnya
+
+6. /api/payment/getbyamount/{price1}, {price2} [Get]
+	//get data between inputan amount
+	masukan price yang sesuai, execute dan didapatkan hasilnya
+
+7. /api/payment/MoreExpDate/{date1} [Get]
+	//get data yang tanggal Expired yang lebih dari input
+	masukan tanggal yang sesuai seperti berikut 2021-10-20T09:27:34.562Z
+	tekan execute dan dapat hasilnya
+
+8. /api/payment/LessExpDate/{date1} [Get]
+	//get data yang tanggal Expired yang kurang dari input
+	masukan tanggal yang sesuai seperti berikut 2021-10-20T09:27:34.562Z
+	tekan execute dan dapat hasilnya
+
+9. /api/payment/GetExpDate/{date1}, {date2} [Get]
+	//get data yang tanggal Expired between inputan
+	masukan tanggal yang sesuai seperti berikut 2021-10-20T09:27:34.562Z
+	tekan execute dan dapat hasilnya
+
+10. /api/payment/{id} [Get]
+	//search by ID
+	masukan id dari data yang ada, execute dan dapatkan hasilnya
+
+11. /api/payment/{id} [Put]
+	//Update By ID
+	masukan data yang sesuai, execute dan data terupdate
+
+12. /api/payment{id} [Delete]
+	//Delete By ID
+	masukan ID dari data yang ada, execute, data deleted
+
