@@ -1,0 +1,17 @@
+<h1>asdasd</h1>
+
+
+<app-header>test</app-header>
+<aside>asd</aside>
+
+<app-button (clickEventHandler)="addCounter()" [name]="'Plus'"></app-button>
+<app-button (clickEventHandler)="minCounter()" [name]="'Minus'"></app-button>
+<app-button (clickEventHandler)="reseto()" [name]="'reset'"></app-button>
+<p>{{ counter }}</p>
+
+<h1>================</h1>
+<app-button *ngIf="buttonState" (clickEventHandler)="setFalse()" [name]="'klik'"></app-button>
+<div id="two1way">
+  <p>{{message}}</p>
+  <label>masukan Pesan: <input [(ngModel)]="message" /></label>
+</div>
