@@ -15,3 +15,77 @@
   <p>{{message}}</p>
   <label>masukan Pesan: <input [(ngModel)]="message" /></label>
 </div>
+<h1>================</h1>
+
+<!-- <app-table [messages]="'asdads'" [isShown]="true"></app-table> -->
+<!-- <label>
+  say something:
+  <input #messages>{{messages | json}}
+</label> -->
+
+<!-- <div *ngFor="let message of messages">
+  <app-table [messages]="message"></app-table>
+</div> -->
+<!-- ini kalo bwt message -->
+<!-- <table border="1">
+  <ng-template ngFor let-message [ngForOf]="messages" let-i="index">
+    <tr *ngIf="i > 1">
+      <td>
+        {{i + 1}}
+      </td>
+      <td>
+        {{message}}
+      </td>
+    </tr>
+  </ng-template>
+</table> -->
+
+
+<!-- <table border="1">
+  <ng-template ngFor let-person [ngForOf]="people" let-i="index">
+    <tr>
+      <ng-template [ngIf]="person.country==='USA'">
+        <li class="text-red" style="color: red;">
+          <td>
+            {{person.name}}
+          </td>
+        </li>
+      </ng-template>
+      <ng-template [ngIf]="person.country==='HK'">
+        <li class="text-red" style="color: green;">
+          <td>
+            {{person.name}}
+          </td>
+        </li>
+      </ng-template>
+      <ng-template [ngIf]="person.country==='UK'">
+        <li class="text-red" style="color: blue;">
+          <td>
+            {{person.name}}
+          </td>
+        </li>
+      </ng-template>
+  </ng-template>
+</table> -->
+
+<!-- 
+<ul *ngFor="let person of people; let i = index" [ngSwitch]="person.age">
+
+  <li *ngSwitchCase="19" style="color: red">
+    {{person.name}} - {{person.age}}
+  </li>
+  <li *ngSwitchCase="18" style="color: blue">
+    {{person.name}} - {{person.age}}
+  </li>
+  <li *ngSwitchCase="17" style="color: green">
+    {{person.name}} - {{person.age}}
+  </li>
+  <li *ngSwitchDefault>
+    {{person.name}} - {{person.age}}
+  </li>
+
+</ul> -->
+
+<h3>
+  {{people | json}}
+</h3>

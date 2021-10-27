@@ -11,6 +11,18 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-app';
   message = '';
+  messages = ['neruson', 'asdasdasd', 'asdasdasd', 'asdasdasd', 'asdasdasd'];
+
+
+  people = [
+    { "name": "ricy", "age": 18, "country": "USA" },
+    { "name": "necro", "age": 19, "country": "UK" },
+    { "name": "asww", "age": 17, "country": "HK" },
+    { "name": "mofph", "age": 19, "country": "MARS" },
+    { "name": "asdasd", "age": 17, "country": "USA" },
+  ]
+
+
   buttonState = true;
   ngOnChanges() { }
   //component sdg di create, tapi blm tmpilkan
