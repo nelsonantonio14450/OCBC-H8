@@ -1,0 +1,23 @@
+body {
+  background: lightblue;
+}
+
+
+
+.box {
+  height: 150px;
+  background: chocolate;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  max-width: 150px;
+
+}
+
+.box-green {
+  height: 150px;
+  background: green;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  max-width: 150px;
+
+}
