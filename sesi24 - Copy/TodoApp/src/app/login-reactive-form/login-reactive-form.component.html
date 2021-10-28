@@ -1,0 +1,25 @@
+<form [formGroup]="loginData" (ngSubmit)="handleLoginForm()">
+
+  <div class="form-group">
+    <label for="username">username</label>
+    <input (change)="handleIsSubmitedState()" type="text" id="username" name="username" formControlName="username">
+
+    <div class="invalid-errors" *ngIf="Username?.invalid">
+      <span *ngIf="Username?.errors?.required">not valid</span>
+      <span *ngIf="Username?.errors?.minlength">username should min
+        {{Username?.errors?.minlength.requiredLength}}</span>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" formControlName="password">
+  </div>
+
+  <input type="submit">
+</form>
+<!-- 
+<div *ngIf="currentUser.isLogin">
+  Success
+</div> -->
