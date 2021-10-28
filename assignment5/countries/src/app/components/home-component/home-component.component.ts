@@ -14,6 +14,9 @@ export class HomeComponentComponent implements OnInit {
   SortPopulate: Countries[] = [];
   SortArea: Countries[] = [];
 
+
+
+
   ID = 0;
 
 
@@ -29,6 +32,7 @@ export class HomeComponentComponent implements OnInit {
 
   fillID(i: number) {
     this.ID = i;
+    console.log(i);
   }
 
   constructor() { }
@@ -77,13 +81,18 @@ export class HomeComponentComponent implements OnInit {
     ]
 
 
-    this.SortArea = this.countries.sort(function (c, d) {
-      return c.area - d.area
-    });
-    this.SortPopulate = this.countries.sort(function (a, b) {
+    this.SortPopulate = this.countries.map(x => Object.assign({}, x));
+    this.SortArea = this.countries.map(x => Object.assign({}, x));
+
+
+    this.SortPopulate.sort(function (a, b) {
       return b.population - a.population
     });
-    //datanya kecampur
+
+    this.SortArea.sort(function (c, d) {
+      return d.area - c.area
+    });
+
 
 
     console.log(this.SortPopulate);

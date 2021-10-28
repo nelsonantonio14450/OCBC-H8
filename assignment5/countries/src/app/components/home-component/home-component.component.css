@@ -5,19 +5,20 @@ body {
 
 
 .box {
-  height: 150px;
+  height: 200px;
   background: chocolate;
-  border-radius: 5px;
+
   margin-bottom: 10px;
-  max-width: 150px;
+  max-width: 200px;
+
 
 }
 
 .box-green {
-  height: 150px;
+  height: 200px;
   background: green;
-  border-radius: 5px;
+
   margin-bottom: 10px;
-  max-width: 150px;
+  max-width: 200px;
 
 }

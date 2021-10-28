@@ -9,59 +9,59 @@
 
 
 
-<div *ngIf="MainShown">
-  <div class="container justify-content-center">
-    <h1 style="text-align: center;">Three Most Populated Countries</h1>
-    <div class="row" style="margin-bottom: 50px;">
+<div *ngIf="MainShown" style="text-align: center;">
 
-      <div class="col-sm-4" *ngFor="let popu of SortPopulate let i = index">
-        <div class="box" *ngIf="i < 3 ">
-          <h3 style="text-align: center;">{{popu.name}}</h3>
+  <h1>Three Most Populated Countries</h1>
+  <div class="row" style="margin-bottom: 50px;">
 
-          <h5 style="text-align: center;">{{popu.population}}</h5>
-          <h5 style="text-align: center;">People</h5>
-        </div>
+    <div class="col-sm-4" *ngFor="let popu of SortPopulate let i = index">
+      <div class="box" *ngIf="i < 3 ">
+        <h3>{{popu.name}}</h3>
+
+        <h5>{{popu.population}}</h5>
+        <h5>People</h5>
       </div>
-
     </div>
 
-    <h1 style="text-align: center;">Three Largest Countries</h1>
-    <div class="row">
-
-      <div class="col-sm-4" *ngFor="let con of SortArea let i = index ">
-        <div class="box" style="align-content: center;" *ngIf="i < 3 ">
-          <h3 style="text-align: center;">{{con.name}}</h3>
-
-          <h5 style="text-align: center;">{{con.area}}</h5>
-          <h5 style="text-align: center;">KM2</h5>
-        </div>
-      </div>
-
-    </div>
   </div>
+
+  <h1 style="text-align: center;">Three Largest Countries</h1>
+  <div class="row">
+
+    <div class="col-sm-4" style="text-align: center; margin:auto" *ngFor="let con of SortArea let i = index ">
+      <div class="box" *ngIf="i < 3 ">
+        <h3>{{con.name}}</h3>
+
+        <h5>{{con.area}}</h5>
+        <h5>KM2</h5>
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
 
 <div *ngIf="!MainShown && !DetailShown">
-  <div class="container justify-content-center">
-    <h1 style="text-align: center;">List of every Country</h1>
-    <div class="row">
 
-      <div class="col-sm-4" *ngFor="let country of countries let i = index">
-        <div class="box-green" (click)="isDetail()" (click)="fillID(i)">
-          <h3 style="text-align: center;">{{country.name}}</h3>
+  <h1 style="text-align: center;">List of every Country</h1>
+  <div class="row">
 
-          <h5 style="text-align: center;">{{country.population}}</h5>
-          <h5 style="text-align: center;">People</h5>
+    <div class="col-sm-4" *ngFor="let country of countries let i = index">
+      <div class="box-green" (click)="isDetail(); fillID(i)">
+        <h3 style="text-align: center;">{{country.name}}</h3>
 
-        </div>
+        <h5 style="text-align: center;">{{country.population}}</h5>
+        <h5 style="text-align: center;">People</h5>
+
       </div>
-
     </div>
+
   </div>
+
 </div>
 
-<div *ngIf="DetailShown">
+<div *ngIf="DetailShown && !MainShown">
   <app-country-detail-component [Iddata]="ID"></app-country-detail-component>
   <div style="text-align: center;">
     <button class="btn btn-danger" (click)="isDetail()">balik</button>
