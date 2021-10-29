@@ -1,11 +1,11 @@
 <form [formGroup]="inputData" (ngSubmit)="handleInputForm()">
   <div class="input-group mb-3">
-    <input (change)="handleIsSubmitedState()" type="text" name="inputTodo" placeholder="enter todo...."
+    <input (change)="handleIsSubmitedState(false)" type="text" name="inputTodo" placeholder="enter todo...."
       formControlName="inputTodo">
 
-    <input type="submit" value="Add Todo" class="btn btn-primary">
+    <input type="submit" class="btn btn-primary">
   </div>
-  <div style="color: red;" class="invalid-errors" *ngIf="Input?.invalid">
+  <div style="color: red;" class="invalid-errors" *ngIf="Input?.invalid && isSubmited == true">
     <span *ngIf="Input?.errors?.required">not valid</span>
     <span *ngIf="Input?.errors?.minlength">Input should min
       {{Input?.errors?.minlength.requiredLength}}</span>

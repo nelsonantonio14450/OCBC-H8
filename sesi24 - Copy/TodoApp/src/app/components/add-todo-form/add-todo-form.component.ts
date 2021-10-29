@@ -34,38 +34,28 @@ export class AddTodoFormComponent implements OnInit {
   // }
 
   handleInputForm() {
-    this.isSubmited = true
-    console.log(this.inputData.get('inputTodo'))
-    this.inputTodo = this.inputData.get('inputTodo')?.value
 
+    this.inputTodo = this.inputData.get('inputTodo')?.value
+    this.handleIsSubmitedState(true)
     if (this.inputData.get('inputTodo')?.status != 'INVALID') {
       const todo: Todo = {
         content: this.inputTodo,
         completed: false
       };
 
+
       this.newTodoEvent.emit(todo)
-      this.inputTodo = ""
+      this.inputData.reset()
+      this.handleIsSubmitedState(false)
     }
   }
 
 
 
-  handleIsSubmitedState() {
-    if (this.isSubmited == true) {
-      this.isSubmited = false
-    }
+  handleIsSubmitedState(i: boolean) {
+    this.isSubmited = i
+
   }
-
-  // addTodo() {
-  //   const todo: Todo = {
-  //     content: this.inputTodo,
-  //     completed: false
-  //   };
-
-  //   this.newTodoEvent.emit(todo)
-  //   this.inputTodo = ""
-  // }
 
   constructor() { }
 
