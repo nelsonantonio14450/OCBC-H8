@@ -1,0 +1,56 @@
+<div mat-dialog-content class="example">
+  <h3 style="text-align: center;">Update Staff - ID: {{data.id}} </h3><br>
+
+
+  <mat-form-field class="inputWidth" appearance="standard">
+    <p>Title</p>
+    <input matInput [(ngModel)]="data.Title" [formControl]="Title">
+    <mat-error *ngIf="Title.invalid">{{getErrorMessageTitle()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="inputWidth" appearance="legacy">
+    <p>First Name</p>
+    <input required matInput [(ngModel)]="data.FirstName" [formControl]="FirstName">
+    <mat-error *ngIf="FirstName.invalid">{{getErrorMessageFN()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="inputWidth" appearance="legacy">
+    <p>Last Name</p>
+    <input required matInput [(ngModel)]="data.LastName" [formControl]="LastName">
+    <mat-error *ngIf="LastName.invalid">{{getErrorMessageLN()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="inputWidth" appearance="legacy">
+    <p>Role</p>
+    <input matInput [(ngModel)]="data.Role" [formControl]="Role">
+    <mat-error *ngIf="Role.invalid">{{getErrorMessageRole()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="inputWidth" appearance="legacy">
+    <p>Email</p>
+    <input matInput [(ngModel)]="data.Email" [formControl]="Email">
+    <mat-error *ngIf="Email.invalid">{{getErrorMessageEmail()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="inputWidth" appearance="legacy">
+    <p>Password</p>
+    <input type="password" matInput [(ngModel)]="data.Password" [formControl]="Password">
+    <mat-error *ngIf="Password.invalid">{{getErrorMessagePass()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="inputWidth" appearance="legacy">
+    <p>Confirm Password</p>
+    <input type="password" matInput [(ngModel)]="data.ConfirmPassword" [formControl]="ConfirmPassword">
+    <mat-error *ngIf="ConfirmPassword.invalid">{{getErrorMessageConPass()}}</mat-error>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button *ngIf="!Title.invalid 
+    && !FirstName.invalid
+    && !LastName.invalid
+    && !Role.invalid
+    && !Email.invalid
+    && !Password.invalid
+    && !ConfirmPassword.invalid" [mat-dialog-close]="data" cdkFocusInitial>Submit</button>
+</div>
