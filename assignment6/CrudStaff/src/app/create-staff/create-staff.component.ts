@@ -17,7 +17,7 @@ export class CreateStaffComponent implements OnInit {
   Role = new FormControl('', [Validators.required]);
   Email = new FormControl('', [Validators.required, Validators.email]);
   Password = new FormControl('', [Validators.required, Validators.minLength(6)]);
-  ConfirmPassword = new FormControl('', [Validators.required],);
+  ConfirmPassword = new FormControl('', [Validators.required, Validators.minLength(6)]);
 
 
 

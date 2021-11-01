@@ -1,0 +1,9 @@
+<div mat-dialog-content class="example">
+  <h3 style="text-align: center;">Delete Staff - {{data.id}} </h3><br>
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button [mat-dialog-close]="data" cdkFocusInitial>Submit</button>
+</div>

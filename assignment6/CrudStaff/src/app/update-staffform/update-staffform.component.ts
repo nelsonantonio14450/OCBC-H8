@@ -1,17 +1,73 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { UserData } from '../users';
 import { StaffServiceService } from '../staff-service.service';
-
-
+import { FormControl, Validators } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-update-staff',
-  templateUrl: './update-staff.component.html',
-  styleUrls: ['./update-staff.component.css']
+  selector: 'app-update-staffform',
+  templateUrl: './update-staffform.component.html',
+  styleUrls: ['./update-staffform.component.css']
 })
-export class UpdateStaffComponent implements OnInit {
+export class UpdateStaffformComponent implements OnInit {
+  id: number
+  test: any
+  obj: any
+
+
+  title: string
+  firstName: string
+  lastName: string
+  role: String
+  email: string
+  password: string
+  confirmPassword: string
+
+
+  constructor(private actRoute: ActivatedRoute, private staff: StaffServiceService) {
+    this.id = this.actRoute.snapshot.params.id;
+
+
+  }
+
+
+  ngOnInit(): void {
+    this.staff.getStaffbyID(this.id).subscribe(x => {
+      this.test = x;
+      this.obj = this.test
+    })
+
+    this.title = this.obj["title"]
+
+    console.log(this.obj)
+
+
+
+
+
+
+  }
+
+  update() {
+    this.obj = {
+      id: this.id,
+      Title: this.title,
+      FirstName: this.FirstName,
+      LastName: this.LastName,
+      Role: this.Role,
+      Email: this.Email,
+      Password: this.Password,
+      ConfirmPassword: this.ConfirmPassword
+
+    }
+
+    this.staff.putStaff(this.obj, this.id).subscribe(x => { console.log('asd') })
+  }
+
+  //================================================================
+
+
 
   Title = new FormControl('', [Validators.required]);
   FirstName = new FormControl('', [Validators.required]);
@@ -54,20 +110,5 @@ export class UpdateStaffComponent implements OnInit {
   }
 
 
-
-  constructor(
-    public dialogRef: MatDialogRef<UpdateStaffComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any, private staff: StaffServiceService) { }
-
-  onNoClick(): void {
-
-
-  }
-  test: any;
-  //data.id
-
-  ngOnInit(): void {
-    // this.staff.getStaffbyID(id).subscribe(x => this.test = x)//ini udh bs
-  }
 
 }
