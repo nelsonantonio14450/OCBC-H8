@@ -46,7 +46,7 @@ export class StafftableComponent implements OnInit {
           ConfirmPassword: result.ConfirmPassword
         }
 
-        this.staff.postStaff(this.obj).subscribe(x => { console.log('asd') })
+        this.staff.postStaff(this.obj).subscribe(x => location.reload())
       }
     });
   }
@@ -65,7 +65,7 @@ export class StafftableComponent implements OnInit {
       if (result) {
         this.id = result.id
 
-        this.staff.delStaff(this.id).subscribe(x => { console.log('asd') })
+        this.staff.delStaff(this.id).subscribe(x => location.reload())
       }
     });
   }
@@ -109,7 +109,8 @@ export class StafftableComponent implements OnInit {
             Password: result.Password,
             ConfirmPassword: result.ConfirmPassword
           }
-          this.staff.putStaff(this.updobj, result.id).subscribe(x => console.log("asd"))//ini udh bs
+          this.staff.putStaff(this.updobj, result.id).subscribe(x => location.reload()
+          )//ini udh bs
 
 
           // }

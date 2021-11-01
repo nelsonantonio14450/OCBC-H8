@@ -4,18 +4,22 @@
   <thead>
     <tr>
       <th scope="col">#</th>
+      <th scope="col">Title</th>
       <th scope="col">First</th>
       <th scope="col">Last</th>
       <th scope="col">Role</th>
+      <th scope="col">Email</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let staff of test">
       <th scope="row">{{staff.id}}</th>
+      <td>{{staff.title}}</td>
       <td>{{staff.firstName}}</td>
       <td>{{staff.lastName}}</td>
       <td>{{staff.role}}</td>
+      <td>{{staff.email}}</td>
       <td><button (click)="openDialogUpd(staff.id)">Update</button> | <button
           (click)="openDeleteDialog(staff.id)">Delete</button></td>
     </tr>
