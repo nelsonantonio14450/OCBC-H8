@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 @Injectable({
@@ -14,9 +15,9 @@ export class StaffServiceService {
     return this.http.get(api)
   }
 
-  getStaffbyID(id: number) {
+  getStaffbyID(id: number): Observable<any[]> {
     const api = `${this.endpoint}/${id}`
-    return this.http.get(api)
+    return this.http.get<any[]>(api)
   }
 
   postStaff(staff: any) {

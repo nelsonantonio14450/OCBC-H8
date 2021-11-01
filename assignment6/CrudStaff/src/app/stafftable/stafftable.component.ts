@@ -73,46 +73,51 @@ export class StafftableComponent implements OnInit {
 
   //update dialogue
   openDialogUpd(id: number): void {
-    this.staff.getStaffbyID(id).subscribe(x => this.test = x)
-    console.log(this.test)
-    this.obj = { //obj dummy bwt value ke form
-
-      Title: this.test[0].title,
-      FirstName: this.test[0].firstName,
-      LastName: this.test[0].lastName,
-      Role: this.test[0].role,
-      Email: this.test[0].email,
-      Password: this.test[0].password,
-      ConfirmPassword: this.test[0].confirmPassword
-    }
-
-    const dialogRef = this.dialog.open(UpdateStaffComponent, {
-      width: '550px',
-      data: this.obj //data 2 arah
-
-
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-
-      if (result) {
-        console.log(result) //update didalam
-        this.updobj = { //ini gk perlu karna obj udh 2 arah transfernya
-          id: result.id,
-          Title: result.Title,
-          FirstName: result.FirstName,
-          LastName: result.LastName,
-          Role: result.Role,
-          Email: result.Email,
-          Password: result.Password,
-          ConfirmPassword: result.ConfirmPassword
-        }
-        this.staff.putStaff(this.updobj, result.id).subscribe(x => console.log("asd"))//ini udh bs
-
-
-        // }
+    let tester: any
+    this.staff.getStaffbyID(id).subscribe(x => {
+      tester = x
+      this.obj = { //obj dummy bwt value ke form
+        id: tester['id'],
+        Title: tester['title'],
+        FirstName: tester['firstName'],
+        LastName: tester['lastName'],
+        Role: tester['role'],
+        Email: tester['email'],
+        Password: tester['password'],
+        ConfirmPassword: tester['confirmPassword']
       }
-    });
+
+
+      const dialogRef = this.dialog.open(UpdateStaffComponent, {
+        width: '550px',
+        data: this.obj //data 2 arah
+
+
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+
+        if (result) {
+          console.log(result) //update didalam
+          this.updobj = { //ini gk perlu karna obj udh 2 arah transfernya
+            id: result.id,
+            Title: result.Title,
+            FirstName: result.FirstName,
+            LastName: result.LastName,
+            Role: result.Role,
+            Email: result.Email,
+            Password: result.Password,
+            ConfirmPassword: result.ConfirmPassword
+          }
+          this.staff.putStaff(this.updobj, result.id).subscribe(x => console.log("asd"))//ini udh bs
+
+
+          // }
+        }
+      });
+    })
+
+
   }
 
 
