@@ -80,9 +80,12 @@
     <tr *ngFor="let payment of test">
       <td>{{payment.cardOwnerName}}</td>
       <td>{{payment.cardNumber}}</td>
-      <td>{{payment.expirationDate | date:"dd-MM-yyyy"}}</td>
-      <td>{{payment.paidAt | date:"dd-MM-yyyy"}}</td>
-      <td>{{payment.amount | number:'1.0':'en-US' }}</td>
+      <td [ngStyle]="{'background-color': selected==1 ? 'yellow' : 'white' }">
+        {{payment.expirationDate | date:"dd-MM-yyyy"}}</td>
+      <td [ngStyle]="{'background-color': selected==2 ? 'yellow' : 'white' }">{{payment.paidAt | date:"dd-MM-yyyy"}}
+      </td>
+      <td [ngStyle]="{'background-color': selected==3 ? 'yellow' : 'white' }">{{payment.amount | number:'1.0':'en-US' }}
+      </td>
     </tr>
 
   </tbody>
