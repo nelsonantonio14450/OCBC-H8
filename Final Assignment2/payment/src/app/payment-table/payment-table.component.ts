@@ -4,6 +4,7 @@ import { PaymentServiceService } from '../payment-service.service';
 import { InsertPaymentComponent } from '../insert-payment/insert-payment.component';
 import { UpdatePaymentComponent } from '../update-payment/update-payment.component';
 import { DeletePaymentComponent } from '../delete-payment/delete-payment.component';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-payment-table',
@@ -17,13 +18,31 @@ export class PaymentTableComponent implements OnInit {
   test: any
 
   constructor(public dialog: MatDialog, private payment: PaymentServiceService) { }
+  dtOptions: DataTables.Settings = {};
+  dtTrigger: Subject<any> = new Subject<any>();
 
 
   ngOnInit(): void {
-    this.payment.getPayment().subscribe(x => {
-      this.test = x
-    })
 
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+    };
+    this.payment.getPayment()
+      .subscribe(data => {
+        this.test = data;
+        console.log(this.test)
+        // Calling the DT trigger to manually render the table
+        this.dtTrigger.next();
+      });
+
+
+    // this.payment.getPayment().subscribe(x => {
+    //   this.test = x
+    // })
+
+    // this.dtOptions = {
+    //   pagingType: 'full_numbers'
+    // };
   }
 
   //insert dialogue
