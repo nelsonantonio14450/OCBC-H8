@@ -30,7 +30,6 @@ export class PaymentTableComponent implements OnInit {
     this.payment.getPayment()
       .subscribe(data => {
         this.test = data;
-        console.log(this.test)
         // Calling the DT trigger to manually render the table
         this.dtTrigger.next();
       });
