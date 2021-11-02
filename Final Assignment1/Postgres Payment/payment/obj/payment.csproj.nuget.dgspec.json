@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Downloads\\belajar c#\\Final Assignment1\\Postgres Payment\\payment\\payment.csproj": {}
+    "C:\\Users\\ASUS\\Downloads\\Codingan intern OCBC\\Final Assignment1\\Postgres Payment\\payment\\payment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Downloads\\belajar c#\\Final Assignment1\\Postgres Payment\\payment\\payment.csproj": {
+    "C:\\Users\\ASUS\\Downloads\\Codingan intern OCBC\\Final Assignment1\\Postgres Payment\\payment\\payment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Downloads\\belajar c#\\Final Assignment1\\Postgres Payment\\payment\\payment.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Downloads\\Codingan intern OCBC\\Final Assignment1\\Postgres Payment\\payment\\payment.csproj",
         "projectName": "payment",
-        "projectPath": "C:\\Users\\ASUS\\Downloads\\belajar c#\\Final Assignment1\\Postgres Payment\\payment\\payment.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Downloads\\Codingan intern OCBC\\Final Assignment1\\Postgres Payment\\payment\\payment.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Downloads\\belajar c#\\Final Assignment1\\Postgres Payment\\payment\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Downloads\\Codingan intern OCBC\\Final Assignment1\\Postgres Payment\\payment\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
