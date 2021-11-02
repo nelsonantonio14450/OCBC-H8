@@ -22,7 +22,14 @@
 
   <mat-form-field class="inputWidth" appearance="legacy">
     <p>Role</p>
-    <input matInput [(ngModel)]="data.Role" [formControl]="Role">
+    <mat-select [(value)]="data.Role" [formControl]="Role">
+      <mat-option value="1">
+        User
+      </mat-option>
+      <mat-option value="0">
+        Admin
+      </mat-option>
+    </mat-select>
     <mat-error *ngIf="Role.invalid">{{getErrorMessageRole()}}</mat-error>
   </mat-form-field>
 

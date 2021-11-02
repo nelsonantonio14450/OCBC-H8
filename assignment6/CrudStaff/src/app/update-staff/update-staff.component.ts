@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { UserData } from '../users';
 import { StaffServiceService } from '../staff-service.service';
+import { Data } from '@angular/router';
 
 
 
@@ -20,6 +21,7 @@ export class UpdateStaffComponent implements OnInit {
   Email = new FormControl('', [Validators.required, Validators.email]);
   Password = new FormControl('', [Validators.required, Validators.minLength(6)]);
   ConfirmPassword = new FormControl('', [Validators.required],);
+
 
 
 
