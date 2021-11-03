@@ -19,10 +19,18 @@
     <input required matInput [(ngModel)]="data.LastName" [formControl]="LastName">
     <mat-error *ngIf="LastName.invalid">{{getErrorMessageLN()}}</mat-error>
   </mat-form-field>
-
+  <p>Role</p>
   <mat-form-field class="inputWidth" appearance="legacy">
-    <p>Role</p>
-    <input matInput [(ngModel)]="data.Role" [formControl]="Role">
+
+    <mat-label>if there is no changes, dont touch it</mat-label>
+    <mat-select [(ngModel)]="data.Role" [(value)]="data.Role" [formControl]="Role">
+      <mat-option value="1">
+        User
+      </mat-option>
+      <mat-option value="0">
+        Admin
+      </mat-option>
+    </mat-select>
     <mat-error *ngIf="Role.invalid">{{getErrorMessageRole()}}</mat-error>
   </mat-form-field>
 
