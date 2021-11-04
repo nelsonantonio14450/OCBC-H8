@@ -21,3 +21,5 @@ step 2. heroku
 - tekan enable auto deploy
 - untuk deployment pertama harus ke menu auto deploy (paling bawah) kemudian tekan deploy
 - project sudah terdeploy
+
+deploy -- database postgres
