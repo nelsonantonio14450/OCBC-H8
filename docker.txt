@@ -1,0 +1,113 @@
+windows + r ketikan appwiz.cpl
+pilih turn window feature on or off
+windows subsystem for linux - on
+windows hypervisor platform - on
+download Heroku cli
+download docker desktop
+cek heroku --version
+cek docker --version
+
+install wsl 2:
+https://docs.microsoft.com/en-gb/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
+
+cek wsl --status
+login heroku
+click new app
+masukan app name "demo-corewebapi"
+stelah itu klik tombol create app
+
+1. Heroku Git
+git add
+git commit
+git push heroku master/main
+
+2. Github.com
+git add
+git commit
+git push origin master/main
+**kalau push kedalam branch master akan melakukan deploy manual menuju heroku
+**kalau push ke main akan otomatis deploy menuju heroku
+
+push github origin main akan langsung deploy
+++ lebih cepat
+-- akan makan resource dan error akan muncul di heroku
+
+push github origin master tidak langsung deploy
+++ lebih aman untuk checking error dan testing
+
+3. Container docker
+nameapp: demo-corewebapi
+registry.heroku.com/demo-corewebapi/web
+
+ketik:
+heroku login
+heroku container:login
+//heroku git:remote -a demo-corewebapi
+heroku container:push web -a demo-corewebapi **Belum dipakai
+
+dotnet publish -c Release
+docker build -t todo:dev .
+
+docker run -d -p 5000:80 --name bank todoapp:dev
+docker tag todoapp:dev registry.heroku.com/nelsonassignment3/web 
+docker tag corewebapi5:dev registry.heroku.com/demo-corewebapi5/web
+
+heroku container:push web -a nelsonassignment3
+heroku container:release web -a nelsonassignment3
+
+//Dockerfile diganti jadi ini
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+EXPOSE 48719
+EXPOSE 27017
+EXPOSE 5000
+EXPOSE 5001
+
+
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+WORKDIR /src
+COPY . .
+
+
+RUN dotnet restore 
+RUN dotnet build --no-restore -c Release -o /app
+
+FROM build AS publish
+RUN dotnet publish "CoreWebApi.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app .
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet CoreWebApi.dll
+
+psql --host=ec2-52-5-1-20.compute-1.amazonaws.com --port=5432 --username=ivnaqwugpjcweo --dbname=d178e9t8r0c5t5
+6f37593555bbdc3978ca4dae6c22928162ed8759faa3f92d89038bb218117343
+
+heroku pg:psql postgresql-rugged-51143 --app nelsonassignment3
+
+User ID=ivnaqwugpjcweo;Password=6f37593555bbdc3978ca4dae6c22928162ed8759faa3f92d89038bb218117343;Host=ec2-52-5-1-20.compute-1.amazonaws.com;Port=5432;Database=d178e9t8r0c5t5;Pooling=true;Use SSL Stream=True;SSL Mode=Require;TrustServerCertificate=True;
+
+heroku pg:psql postgresql-aerodynamic-51887 --app nelsonfinalassignment1 < script.sql
+
+User=ivnaqwugpjcweo; 
+Password=6f37593555bbdc3978ca4dae6c22928162ed8759faa3f92d89038bb218117343; 
+Host=ec2-52-5-1-20.compute-1.amazonaws.com;
+Trust Server Certificate=True; 
+Port=5432; 
+dbname=d178e9t8r0c5t5; 
+SSL Mode=Require;
+
+
+1. push ke github
+2. branch main jika ingin otomatis
+3. deploy ke heroku
+
+
+1. container registry
+
+github
+
+
+
