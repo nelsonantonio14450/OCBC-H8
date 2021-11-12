@@ -1,1 +1,13 @@
-<router-outlet></router-outlet>
+<div id="session26">
+  <div>
+    Navigate:
+    <ul>
+      <li><app-link [linkTo]="['movies']" linkName="My Movies"></app-link></li>
+      <li><app-link [linkTo]="['studios']" linkName="Available Studios"></app-link></li>
+    </ul>
+  </div>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
